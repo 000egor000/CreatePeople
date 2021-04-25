@@ -1,0 +1,177 @@
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  [dir='rtl'] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  button {
+    color: none;
+    font-size: 0;
+    background: #f7da00;
+    border: none;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    outline: none;
+  }
+  li[class='slick-active'] button {
+    background: #e8bb09;
+    transform: scale(1.5);
+  }
+}
+.sliderr {
+  position: relative;
+  padding: 200px 60px 0 60px; // поля между стрелкой и краем слайдера
+}
+
+.sliderr .slick-arrow {
+  outline: none;
+  position: absolute;
+  top: 30%; // выравнивание по вертикали
+  margin: -15px 0 0 0; // корректировка  вертикального выравнивания
+  z-index: 2; // стрелки сверху картинок
+  font-size: 0; // убираем надпись на дефолтной стрелке
+  width: 105px; // ширина стрелки
+  height: 105px; // высота стрелки
+  border: none;
+}
+.sliderr .slick-arrow.slick-prev {
+  left: 5px; // левая стрелка остается с левой стороны слайдера
+  background: url('../image/Arrow__left.png') 0 0 / 100% no-repeat;
+}
+
+.sliderr .slick-arrow.slick-next {
+  right: 25px; // правая стрелка переместилась справа от слайдера
+  background: url('../image/Arrow__right.png') 0 0 / 100% no-repeat;
+}
+
+// .wedding {
+//   position: relative;
+//   padding: 200px 60px 0 60px; // поля между стрелкой и краем слайдера
+// }
+
+// .wedding .slick-arrow {
+//   outline: none;
+//   position: absolute;
+//   top: 30%; // выравнивание по вертикали
+//   margin: -15px 0 0 0; // корректировка  вертикального выравнивания
+//   z-index: 2; // стрелки сверху картинок
+//   font-size: 0; // убираем надпись на дефолтной стрелке
+//   width: 25px; // ширина стрелки
+//   height: 25px; // высота стрелки
+//   border: none;
+// }
+// .wedding .slick-arrow.slick-prev {
+//   left: 5px; // левая стрелка остается с левой стороны слайдера
+//   background: url('../image/Arrow__left.png') cover;
+// }
+
+// .wedding .slick-arrow.slick-next {
+//   right: 25px; // правая стрелка переместилась справа от слайдера
+//   background: url('../image/Arrow__right.png') 0 0 / 100% no-repeat;
+// }
